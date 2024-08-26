@@ -1,0 +1,26 @@
+<main>
+    <div class="d-flex justify-content-between">
+        <div class="d-flex flex-column">
+            <span class="lh-sm fs-2 fw-bolder">Hi, welcome back!</span>
+            <span class="fs-5 template_tag">Sales monitoring dashboard template.</span>
+        </div>
+        <div class="d-flex">
+            <div class="d-flex flex-column me-4">
+                <span class="text-end rating">Customer Ratings</span>
+                <div class="d-flex flex-row">
+                    <span class="star_rating" ><p-rating [ngModel]="val" [cancel]="false"></p-rating></span>
+                    <span class="rating_count">(14,873)</span>
+                </div>
+            </div>
+            <div class="d-flex flex-column me-4">
+                <span class="sales">Online Sales</span>
+                <span class="sales-count">563,275</span>
+            </div>
+            <div class="d-flex flex-column me-4">
+                <span class="sales">Offline Sales</span>
+                <span class="sales-count">783,657</span>
+            </div>
+          
+        </div>
+    </div>
+</main>

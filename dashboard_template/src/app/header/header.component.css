@@ -32,6 +32,9 @@ form {
 .cursor_toggle {
   cursor: pointer;
 }
+.site_logo{
+  width: 12vw;
+}
 
 @media screen and (max-width: 1440px) {
   .menu_search {
