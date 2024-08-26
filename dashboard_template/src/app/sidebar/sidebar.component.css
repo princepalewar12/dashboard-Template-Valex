@@ -1,5 +1,19 @@
-.sidebar{
-    width: 236px;
-    height: 93vh;
-    background-color:aqua
+.sidebar {
+  width: 236px;
+  height: 93vh;
+  /* background-color: aqua; */
+}
+li {
+  list-style: none;
+  font-weight: 500;
+}
+.cursor {
+  cursor: pointer;
+  color: #a6a6a6;
+}
+.menu_head {
+    color: #394257;
+}
+.active{
+    color:#1d7afc;
 }

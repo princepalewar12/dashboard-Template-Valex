@@ -28,7 +28,8 @@ form {
   height: 7vh;
 }
 
-.cursor {
+.cursor,
+.cursor_toggle {
   cursor: pointer;
 }
 
@@ -52,14 +53,13 @@ form {
   /* .header-right {
     width: 30%;
   } */
-  .cursor{
-
+  .cursor {
     margin-right: 0px;
   }
-  .hide{
+  .hide {
     display: none;
   }
-  .avatar{
+  .avatar {
     margin-left: 16px;
   }
 }
