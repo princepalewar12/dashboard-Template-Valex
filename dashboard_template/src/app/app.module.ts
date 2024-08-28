@@ -9,7 +9,12 @@ import { DashboardBodyComponent } from './dashboard-body/dashboard-body.componen
 
 // primeNg
 import { RatingModule } from 'primeng/rating';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { GMapModule } from 'primeng/gmap';
+import { ChartModule } from 'primeng/chart';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +22,17 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     DashboardBodyComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RatingModule,FormsModule],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    AppRoutingModule,
+    RatingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgApexchartsModule,
+    GMapModule,
+    ChartModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -4,27 +4,106 @@ main {
   left: 12%;
   height: 93vh;
   width: 88vw;
-  /* background-color: rgb(178, 237, 255); */
   padding: 20px;
+  background-color: #ecf0fa;
+  overflow-y: auto;
 }
 .rating_count {
   font-weight: 500;
-  font-size: large;
-  padding-left: 5px;
+  margin-left: 7px;
+  margin-top: 1px;
 }
-.star_rating{
-    margin-top: 5px;
+.star_rating {
+  margin-right: 10px;
 }
 .sales-count {
   font-size: larger;
   font-weight: 700;
 }
+.map_barChart_text,
 .sales,
 .rating {
   font-size: small;
   font-weight: 500;
   color: #8c95aa;
 }
-.template_tag{
-    color: #8c95aa;
+.template_tag {
+  color: #8c95aa;
+}
+.card {
+  width: 25%;
+  height: 100%;
+}
+.card1 {
+  background: linear-gradient(
+    85deg,
+    rgba(44, 123, 233, 1) 40%,
+    rgba(96, 152, 236, 1) 95%
+  );
+  border: none;
+}
+.card2 {
+  background: linear-gradient(
+    90deg,
+    rgba(248, 74, 103, 1) 2%,
+    rgba(243, 148, 166, 1) 100%
+  );
+  border: none;
+}
+.card3 {
+  background: linear-gradient(
+    270deg,
+    rgba(67, 173, 140, 1) 6%,
+    rgba(37, 162, 123, 1) 96%
+  );
+  border: none;
+}
+.card4 {
+  background: linear-gradient(
+    90deg,
+    rgba(247, 107, 46, 1) 12%,
+    rgba(237, 193, 180, 1) 99%
+  );
+  border: none;
+}
+::ng-deep .p-rating .p-rating-icon:focus {
+  box-shadow: none;
+}
+.chart_statistics {
+  width: 100%;
+  height: 17%;
+}
+.barChar_map {
+  width: 100%;
+  height: 37%;
+}
+.barChart {
+  width: 58%;
+  height: 100%;
+}
+.map {
+  width: 42%;
+  height: 100%;
+}
+.chart {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0px;
+}
+.customer_name {
+  font-weight: 600;
+}
+.customer_id {
+  font-size: small;
+  font-weight: 500;
+  color: #8c95aa;
+}
+.payment_paid {
+  color: #5ecc73;
+  font-weight: 500;
+}
+.payment_pending {
+  color: #ef65a5;
+  font-weight: 500;
 }

@@ -1,14 +1,16 @@
 <main>
+    <!-- upper section -->
     <div class="d-flex justify-content-between">
         <div class="d-flex flex-column">
-            <span class="lh-sm fs-2 fw-bolder">Hi, welcome back!</span>
+            <span class="lh-sm fs-3 fw-bolder">Hi, welcome back!</span>
             <span class="fs-5 template_tag">Sales monitoring dashboard template.</span>
         </div>
         <div class="d-flex">
             <div class="d-flex flex-column me-4">
                 <span class="text-end rating">Customer Ratings</span>
                 <div class="d-flex flex-row">
-                    <span class="star_rating" ><p-rating [ngModel]="val" [cancel]="false"></p-rating></span>
+                    <span class="star_rating"><p-rating [ngModel]="val" [iconOnStyle]='iconOnStyle'
+                            [iconOffStyle]='iconOffStyle' [cancel]="false"></p-rating></span>
                     <span class="rating_count">(14,873)</span>
                 </div>
             </div>
@@ -20,7 +22,161 @@
                 <span class="sales">Offline Sales</span>
                 <span class="sales-count">783,657</span>
             </div>
-          
         </div>
     </div>
+    <!-- chart statistics -->
+    <div class=" chart_statistics d-flex justify-content-between mt-4">
+        <div class="card card1 bg-info border rounded me-4">
+            <div class="d-flex align-items-center justify-content-between px-3 py-2">
+                <div class=" d-flex flex-column text-light">
+                    <span class=" lh-sm pb-2 fs-6 opacity-100">TODAY ORDERS</span>
+                    <span class="lh-sm fs-5 fw-bold">&#36;5,74.12</span>
+                    <span class="lh-sm fw-lighter opacity-75">Compared to last week</span>
+                </div>
+                <div class="pt-3">
+                    <span class="text-light">
+                        <i class="bi bi-arrow-up-circle-fill pe-1"></i>&#43;427
+                    </span>
+                </div>
+            </div>
+            <img class="chart" src="../../assets/normal.png" alt="">
+        </div>
+        <div class="card card2 bg-danger rounded me-4">
+            <div class="d-flex align-items-center justify-content-between px-3 py-2">
+                <div class=" d-flex flex-column text-light">
+                    <span class=" lh-sm pb-2 fs-6 opacity-100">TODAY EARNINGS</span>
+                    <span class="lh-sm fs-5 fw-bold">&#36;1,230.17</span>
+                    <span class="lh-sm fw-lighter opacity-75">Compared to last week</span>
+                </div>
+                <div class="pt-3">
+                    <span class="text-light">
+                        <i class="bi bi-arrow-down-circle-fill pe-1"></i>&minus;23.09%
+                    </span>
+                </div>
+            </div>
+            <img class="chart" src="../../assets/chart2.png" alt="">
+        </div>
+        <div class="card card3 bg-danger rounded me-4">
+            <div class="d-flex align-items-center justify-content-between px-3 py-2">
+                <div class=" d-flex flex-column text-light">
+                    <span class=" lh-sm pb-2 fs-6 opacity-100">TOTAL EARNINGS</span>
+                    <span class="lh-sm fs-5 fw-bold">&#36;7,125.70</span>
+                    <span class="lh-sm fw-lighter opacity-75">Compared to last week</span>
+                </div>
+                <div class="pt-3">
+                    <span class="text-light">
+                        <i class="bi bi-arrow-up-circle-fill pe-1"></i>52.09%
+                    </span>
+                </div>
+            </div>
+            <img class="chart" src="../../assets/normal3.png" alt="">
+        </div>
+        <div class="card card4 bg-danger rounded">
+            <div class="d-flex align-items-center justify-content-between px-3 py-2">
+                <div class=" d-flex flex-column text-light">
+                    <span class=" lh-sm pb-2 fs-6 opacity-100">PRODUCT SOLD</span>
+                    <span class="lh-sm fs-5 fw-bold">&#36;4,820.50</span>
+                    <span class="lh-sm fw-lighter opacity-75">Compared to last week</span>
+                </div>
+                <div class="pt-3">
+                    <span class="text-light">
+                        <i class="bi bi-arrow-down-circle-fill pe-1"></i>&minus;152.3
+                    </span>
+                </div>
+            </div>
+            <img class="chart" src="../../assets/normal3.png" alt="">
+        </div>
+    </div>
+    <!-- Bar chart and Map -->
+    <div class="barChar_map d-flex justify-content-between mt-4">
+        <div class="barChart bg-light me-4 rounded p-3">
+            <div class="d-flex flex-column">
+                <div class="d-flex justify-content-between">
+                    <span class="lh-sm pb-2 fw-bold">ORDER STATUS</span>
+                    <span>
+                        <img src="../../assets/three-dots-vertical-svgrepo-com.png" width="30px" height="30px" alt="">
+                    </span>
+                </div>
+                <span class="map_barChart_text lh-sm pb-2">ORDER STATUS AND TRACKING. TRACK YOUR ORDER FROM SHIP DATE TO
+                    ARRIVAL. TO BEGIN ENTER ORDER NUMBER.</span>
+            </div>
+            <p-chart type="bar" [width]="'100%'" [height]="'80%'" [options]="options" [data]="data"></p-chart>
+
+        </div>
+        <div class="map bg-light rounded p-3">
+            <div class="d-flex flex-column">
+                <span class="lh-sm pb-2 fw-bold">SALES REVENUE BY CUSTOMERS IN USA</span>
+                <span class="map_barChart_text pb-2">SALES PERFORMANCE BY ALL STATE BY UNITED STATE</span>
+            </div>
+            <div id="map" style="width:100%;height:80%"></div>
+        </div>
+    </div>
+    <div class="w-100 h-75 mt-4 d-flex justify-content-between">
+        <div class="w-50 h-100 bg-light rounded p-3 me-4">
+            <div class="d-flex flex-column">
+                <span class="lh-sm pb-2 fw-bold">RECENT CUSTOMERS</span>
+                <span class="map_barChart_text pb-2">A customer is an individual or business that purchases the goods
+                    service has evolved to include real-time</span>
+            </div>
+            <div class="d-flex justify-content-between border-bottom">
+                <div class="d-flex align-items-center pe-3 mt-3">
+                    <div class="pe-3">
+                        <img src="../../assets/avatar-1.svg" width="45px" height="45px" alt="">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="customer_name">Samantha Melon</div>
+                        <div><span class="customer_id">User ID: #1234 </span><span class="payment_paid ps-2 ">Paid</span></div>
+                    </div>
+                </div>
+                <div class="w-50 ">
+                    <img src="../../assets/pink-chart-line.png" class="w-100 " alt="">
+                </div>
+            </div>
+            <div class="d-flex justify-content-between border-bottom">
+                <div class="d-flex align-items-center pe-3 mt-3">
+                    <div class="pe-3">
+                        <img src="../../assets/avatar-2.svg" width="45px" height="45px" alt="">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="customer_name">Jimmy Changa</div>
+                        <div><span class="customer_id">User ID: #1234 </span><span class="payment_pending ps-2 ">Pending</span></div>
+                    </div>
+                </div>
+                <div class="w-50">
+                    <img src="../../assets/green-chart-line.png" class="w-100" alt="">
+                </div>
+            </div>
+            <div class="d-flex justify-content-between border-bottom">
+                <div class="d-flex align-items-center pe-3 mt-3">
+                    <div class="pe-3">
+                        <img src="../../assets/avatar-3.svg" width="45px" height="45px" alt="">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="customer_name">Gabe Lackmen</div>
+                        <div><span class="customer_id">User ID: #1234 </span><span class="payment_pending ps-2 ">Pending</span></div>
+                    </div>
+                </div>
+                <div class="w-50 ">
+                    <img src="../../assets/orange-chart-line.png" class="w-100 " alt="">
+                </div>
+            </div>
+            <div class="d-flex justify-content-between border-bottom">
+                <div class="d-flex align-items-center pe-3 mt-3">
+                    <div class="pe-3">
+                        <img src="../../assets/avatar-4.svg" width="45px" height="45px" alt="">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <div class="customer_name">Sharon Needles</div>
+                        <div><span class="customer_id">User ID: #1234 </span><span class="payment_paid ps-2 ">Paid</span></div>
+                    </div>
+                </div>
+                <div class="w-50 ">
+                    <img src="../../assets/purple-line-chart.png" class="w-100 " alt="">
+                </div>
+            </div>
+        </div>
+        <div class="w-50 h-100 bg-light rounded me-4"></div>
+        <div class="w-50 h-100 bg-light rounded"></div>
+    </div>
+
 </main>
