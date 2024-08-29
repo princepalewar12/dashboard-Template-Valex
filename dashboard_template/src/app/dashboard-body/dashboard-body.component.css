@@ -114,11 +114,25 @@ main {
 }
 .vertical_line {
   bottom: 80px;
-  right: 1040px;
+  right: 1038px;
   height: 65%;
   border: 1px dotted #c4c9d6;
   z-index: -1;
 }
 .sales_activity_subSection {
   z-index: 1;
+}
+.progress-bar-section{
+  height: 21%;
+}
+::ng-deep #test .p-slider .p-slider-range {
+  background: #e0164f;
+}
+::ng-deep #test .p-slider .p-slider-handle {
+  border: 2px solid #e0164f;
+}
+.blue-square {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
 }

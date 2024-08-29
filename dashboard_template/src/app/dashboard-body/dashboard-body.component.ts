@@ -27,6 +27,8 @@ export class DashboardBodyComponent implements OnInit {
   basicData: any;
   data: any;
   options: any;
+  totalSales: number = 80;
+  activeUsers: number = 45;
   constructor() {}
 
   ngOnInit(): void {
@@ -79,5 +81,55 @@ export class DashboardBodyComponent implements OnInit {
         },
       },
     };
+
+    var options = {
+      series: [83],
+      chart: {
+        height: 350,
+        type: 'radialBar',
+        offsetY: -10,
+      },
+      plotOptions: {
+        radialBar: {
+          startAngle: -135,
+          endAngle: 135,
+          dataLabels: {
+            name: {
+              fontSize: '16px',
+              color: undefined,
+              // offsetY: 120
+            },
+            value: {
+              offsetY: -10,
+              fontSize: '22px',
+              color: undefined,
+              formatter: function (val: string) {
+                return val + '%';
+              },
+            },
+          },
+        },
+      },
+      fill: {
+        type: 'gradient',
+        gradient: {
+          shade: 'dark',
+          shadeIntensity: 0.6,
+          inverseColors: false,
+          opacityFrom: 1,
+          opacityTo: 1,
+          stops: [0, 50, 65, 91],
+        },
+      },
+      stroke: {
+        dashArray: 5,
+      },
+      labels: [''],
+    };
+    var chart = new ApexCharts(
+      document.querySelector('#stroked_gauge'),
+      options
+    );
+    chart.render();
   }
 }

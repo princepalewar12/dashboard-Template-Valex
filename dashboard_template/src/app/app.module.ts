@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { GMapModule } from 'primeng/gmap';
 import { ChartModule } from 'primeng/chart';
+import { SliderModule } from 'primeng/slider';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ChartModule } from 'primeng/chart';
     NgApexchartsModule,
     GMapModule,
     ChartModule,
+    SliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
