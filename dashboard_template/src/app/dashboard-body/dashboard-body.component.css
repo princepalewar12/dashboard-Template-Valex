@@ -107,3 +107,18 @@ main {
   color: #ef65a5;
   font-weight: 500;
 }
+.no_of_day {
+  font-size: small;
+  font-weight: 500;
+  color: #8c95aa;
+}
+.vertical_line {
+  bottom: 80px;
+  right: 1040px;
+  height: 65%;
+  border: 1px dotted #c4c9d6;
+  z-index: -1;
+}
+.sales_activity_subSection {
+  z-index: 1;
+}
