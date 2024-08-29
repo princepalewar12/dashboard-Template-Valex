@@ -47,7 +47,7 @@ export class DashboardBodyComponent implements OnInit {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
         {
-          label: 'My First dataset',
+          label: 'My first dataset',
           backgroundColor: '#2779eb',
           borderColor: '#2779eb',
           data: [65, 59, 80, 81, 56, 55, 40],
@@ -59,7 +59,7 @@ export class DashboardBodyComponent implements OnInit {
           data: [28, 48, 40, 19, 86, 27, 90],
         },
         {
-          label: 'My Second dataset',
+          label: 'My third dataset',
           backgroundColor: '#f8b26f',
           borderColor: '#f8b26f',
           data: [28, 48, 40, 55, 86, 27, 90],
@@ -101,7 +101,7 @@ export class DashboardBodyComponent implements OnInit {
             },
             value: {
               offsetY: -10,
-              fontSize: '22px',
+              fontSize: '32px',
               color: undefined,
               formatter: function (val: string) {
                 return val + '%';

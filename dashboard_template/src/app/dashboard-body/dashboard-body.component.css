@@ -122,7 +122,7 @@ main {
 .sales_activity_subSection {
   z-index: 1;
 }
-.progress-bar-section{
+.progress-bar-section {
   height: 21%;
 }
 ::ng-deep #test .p-slider .p-slider-range {
@@ -135,4 +135,7 @@ main {
   width: 15px;
   height: 15px;
   margin-right: 10px;
+}
+.top_country {
+  width: 49%;
 }
